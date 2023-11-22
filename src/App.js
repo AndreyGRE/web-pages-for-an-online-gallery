@@ -30,6 +30,7 @@ function App() {
             });
     },[]);
     
+    
     function SelectAlbum () {
         setNumberAlbum(document.getElementById("AlbumSelect").value)
         fetch(`https://jsonplaceholder.typicode.com/albums/${document.getElementById("AlbumSelect").value}/photos`)
