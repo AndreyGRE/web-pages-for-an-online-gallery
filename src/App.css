@@ -45,7 +45,7 @@
 
   flex-direction: column;
   width: 40%;
-
+  min-width: 250px;
   border: solid 1px rgb(250, 96, 78);
   border-radius: 20px;
 }
@@ -104,8 +104,10 @@ select{
   border-radius: 20px;
   background-color: rgb(228, 226, 226);
   visibility: hidden;
-  width: 50em;
-  height: 50em;
+  width: 65%;
+  height: 70%;
+  min-width: 450px ;
+  min-height: 500px;
   z-index: 99;
   display: flex;
   flex-direction: column;
