@@ -1,38 +1,170 @@
-.App {
+.gallery {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.allImages{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2%;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap:1%;
+  align-items: stretch;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.post{
+  position: relative;
+  width: 200px;
+  height: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1%;
+  border: 1px solid; 
+  border-radius: 20px; 
+  flex: 1;
+  margin: 1%;
+  cursor: pointer;
+  justify-content: space-between
+}
+.images{
+  width: 150px;
+  border-radius: 20px;
+}
+
+.post:hover{
+  transform: scale(1.1);
+  transition: transform 0.5s ;
+}
+
+.selectSortSearch{
+  margin: auto;
+  padding: 1%;
+  gap: 10px;
+  display: flex;
+
+  flex-direction: column;
+  width: 40%;
+
+  border: solid 1px rgb(250, 96, 78);
+  border-radius: 20px;
+}
+
+.search {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap:2%;
+}
+.sort {
+  
+  display: flex;
+  justify-content: center;
+  gap:2%;
+}
+.selectionAlbum{
+  
+  display: flex;
+  justify-content: center;
+  gap:2%;
 }
 
-.App-link {
-  color: #61dafb;
+button{
+  background: linear-gradient(70deg, rgb(142, 142, 255), rgb(255, 141, 151));
+  border: none;
+  border-radius: 20px;
+}
+input{
+  border-radius: 20px;
+  padding-left:1% ;
+  border: solid 1px salmon;
+}
+select{
+  border-radius: 20px;
+  border: solid 1px salmon;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.modalBackground{
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;;
+  top: 0px;
+  visibility: hidden;
+  z-index: 90;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal{
+  position: fixed;
+  border: solid 1px salmon;
+  border-radius: 20px;
+  background-color: rgb(228, 226, 226);
+  visibility: hidden;
+  width: 50em;
+  height: 50em;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+}
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.close{
+  position: absolute;
+  font-size: 50px;
+  right: 0;
+  margin: 0 2%;
+  cursor: pointer;
+}
+
+.modal .images{
+  margin: 2%;
+  width: 50%;
+  border-radius: 20px;
+}
+
+.modal p{
+  font-size: 20px;
+}
+
+.modal .nav {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.nav button {
+  cursor: pointer;
+}
+
+.modal .comment{
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y:auto;
+  border-top: solid rgb(7, 5, 5) 1px;
+  border-radius: 20px;
+}
+.modal input{
+  margin-top: 1% ;
+  width: 40%;
+}
+
+.modal .commentText{
+  word-wrap:break-word;
+  text-align: center;
+  width: 100%;
+  overflow-y:auto;
+}
+
+.modal p{
+  margin: 2% 2%;
 }
