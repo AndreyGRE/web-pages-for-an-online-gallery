@@ -28,7 +28,7 @@ function App() {
                 setElementsAlbum(json);
                 setElementsRender(json)
             });
-    },[]);
+    },[numberAlbum]);
     
 
     function SelectAlbum () {
