@@ -67,8 +67,9 @@ function App() {
         setTextInput(e.target.value)
     }
     function SearchInAlbum () {
+        if(textInput !== null && textInput !== ""){
         let searchElementAlbums = elementsAlbums.filter(item => item.title.includes(textInput))
-        setElementsRender([...searchElementAlbums])
+        setElementsRender([...searchElementAlbums])}
     }
 
     function openModal (element,index) {
