@@ -9,7 +9,7 @@ function App() {
     // элементы альбома на экране
     const [elementsRender, setElementsRender] = useState([])
     // в инпуте поиска
-    const [textInput, setTextInput] = useState("")
+    const [textInput, setTextInput] = useState(null)
     // выбранный элемент для модельного окна
     const [selectItem, setSelectItem] = useState([])
     //индекс выбранного элемента 
@@ -30,7 +30,7 @@ function App() {
             });
     },[]);
     
-    
+
     function SelectAlbum () {
         setNumberAlbum(document.getElementById("AlbumSelect").value)
         fetch(`https://jsonplaceholder.typicode.com/albums/${document.getElementById("AlbumSelect").value}/photos`)
